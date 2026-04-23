@@ -1,0 +1,2 @@
+## Typescript
+A structured and professional collection of TypeScript core concepts, covering fundamental to intermediate topics with practical examples. This repository is designed to strengthen type safety knowledge and build a solid foundation for scalable application development using TypeScript.
