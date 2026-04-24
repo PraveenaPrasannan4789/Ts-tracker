@@ -110,6 +110,3 @@ let user: { name: string; age: number } = {
 console.log("Object:", user);
 
 
-// ===============================
-// End of File
-// ===============================
