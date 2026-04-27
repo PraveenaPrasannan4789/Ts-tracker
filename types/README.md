@@ -1,3 +1,4 @@
+Anything that helps define or restrict values belongs under “types”.
 ## union-types.ts
 # What is a Union Type?
 

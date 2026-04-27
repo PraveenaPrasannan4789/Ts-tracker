@@ -1,4 +1,11 @@
-let value: string | number;
+enum Role {
+  name = "test1",
+  age = 30,
+}
 
-value = "Hello";
-value = 100;
+let userRole: Role = Role.name;
+console.log("usernameee", userRole);
+
+if (userRole === Role.name) {
+  console.log("Admin access");
+}
