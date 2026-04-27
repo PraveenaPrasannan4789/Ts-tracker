@@ -32,3 +32,19 @@ let x1: newUser1 = {
 };
 
 console.log("combined user value", x1);
+
+// Example -2 intersection of interface
+interface data1 {
+  name: string;
+}
+
+interface data2 {
+  age: number;
+}
+
+interface data3 extends data1, data2 {}
+
+let xy: data3 = {
+  name: "praveena",
+  age: 27,
+};
