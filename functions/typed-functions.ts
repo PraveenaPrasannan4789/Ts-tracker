@@ -43,3 +43,11 @@ const printFn = (obj: { name: string; age: number }) => {
 console.log("printFn", printFn({ name: "ammu", age: 25 }));
 
 7; // 7. Function type definition
+//Instead of repeating types everywhere:
+type fnType = (x: number, y: number) => number;
+
+const example: fnType = (a, b) => {
+  return a / b;
+};
+
+console.log("function type definition", example(15, 3));
