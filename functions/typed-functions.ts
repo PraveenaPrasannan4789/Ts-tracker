@@ -35,3 +35,11 @@ const arrowExample = (a: number, b: number): number => {
   return a * b;
 };
 console.log("arrowExample", arrowExample(5, 3));
+
+// 6. Function with object parameter
+const printFn = (obj: { name: string; age: number }) => {
+  return `Name: ${obj.name} Age:${obj.age}`;
+};
+console.log("printFn", printFn({ name: "ammu", age: 25 }));
+
+7; // 7. Function type definition
