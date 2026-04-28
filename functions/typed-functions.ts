@@ -21,3 +21,17 @@ function greet(x: any, y?: any): any {
 }
 console.log("Optional Parameter Example", greet(5));
 console.log("Optional Prameter Example", greet("hello", "function "));
+
+// 4. Default parameters
+function defaultParameter(a: number, b: number = 5): number {
+  return a * b;
+}
+
+console.log("defaultParameter", defaultParameter(5));
+console.log("defaultParameter", defaultParameter(5, 4));
+
+// 5. Arrow function with types
+const arrowExample = (a: number, b: number): number => {
+  return a * b;
+};
+console.log("arrowExample", arrowExample(5, 3));
