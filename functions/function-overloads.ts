@@ -1,58 +1,56 @@
-// =======================================
 // Function Overloading in TypeScript
-// =======================================
 
-// 1. Basic overload example
+// function overLoadExample(a: number, b: string): number;
+// function overLoadExample(a: number, b: number): number;
 
-// Overload signatures
-function combine(a: string, b: string): string;
-function combine(a: number, b: number): number;
+//implementation-1
 
-// Implementation
-function combine(a: any, b: any): any {
+function overLoadExample(a: any, b: any): any {
   return a + b;
 }
 
-// Usage
-const result1 = combine("Hello ", "World");
-const result2 = combine(10, 20);
+console.log("overLoad Example", overLoadExample("hello", "praveena"));
 
-console.log("String Combine:", result1);
-console.log("Number Combine:", result2);
+// // Usage
+// const result1 = combine("Hello ", "World");
+// const result2 = combine(10, 20);
 
-// 2. Overload with different return types
+// console.log("String Combine:", result1);
+// console.log("Number Combine:", result2);
 
-function format(value: number): string;
-function format(value: string): string;
+// // 2. Overload with different return types
 
-function format(value: any): string {
-  if (typeof value === "number") {
-    return `Number: ${value}`;
-  }
-  return `String: ${value}`;
-}
+// function format(value: number): string;
+// function format(value: string): string;
 
-console.log(format(100));
-console.log(format("TypeScript"));
+// function format(value: any): string {
+//   if (typeof value === "number") {
+//     return `Number: ${value}`;
+//   }
+//   return `String: ${value}`;
+// }
 
-// 3. Real-world example (API-like)
+// console.log(format(100));
+// console.log(format("TypeScript"));
 
-function getUser(id: number): { id: number; name: string };
-function getUser(email: string): { email: string; name: string };
+// // 3. Real-world example (API-like)
 
-function getUser(param: any): any {
-  if (typeof param === "number") {
-    return { id: param, name: "User by ID" };
-  } else {
-    return { email: param, name: "User by Email" };
-  }
-}
+// function getUser(id: number): { id: number; name: string };
+// function getUser(email: string): { email: string; name: string };
 
-console.log(getUser(1));
-console.log(getUser("test@example.com"));
+// function getUser(param: any): any {
+//   if (typeof param === "number") {
+//     return { id: param, name: "User by ID" };
+//   } else {
+//     return { email: param, name: "User by Email" };
+//   }
+// }
 
-// =======================================
-// Important Notes:
-// - Overload signatures (top) → only types
-// - Implementation (bottom) → actual logic
-// =======================================
+// console.log(getUser(1));
+// console.log(getUser("test@example.com"));
+
+// // =======================================
+// // Important Notes:
+// // - Overload signatures (top) → only types
+// // - Implementation (bottom) → actual logic
+// // =======================================
