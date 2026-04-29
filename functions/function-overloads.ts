@@ -36,7 +36,7 @@ function format(value: any): string {
 console.log(format(100));
 console.log(format("TypeScript"));
 
-// // 3. Real-world example (API-like)
+// 3. Real-world example (API-like)
 
 function getUser(id: number): { id: number; name: string };
 function getUser(email: string): { email: string; name: string };
@@ -51,9 +51,3 @@ function getUser(param: any): any {
 
 console.log(getUser(1));
 console.log(getUser("test@example.com"));
-
-// =======================================
-// Important Notes:
-// - Overload signatures (top) → only types
-// - Implementation (bottom) → actual logic
-// =======================================
