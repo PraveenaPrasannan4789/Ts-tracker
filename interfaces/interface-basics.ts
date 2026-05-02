@@ -16,11 +16,11 @@ interface userNew {
   age: 10;
 }
 
-// 🔹 Readonly property
-// interface User {
-//   readonly id: number;
-//   name: string;
-// }
+//Readonly property
+interface UserNew1 {
+  readonly id: number;
+  name: string;
+}
 
 // 👉 id cannot be changed after assignment
 
