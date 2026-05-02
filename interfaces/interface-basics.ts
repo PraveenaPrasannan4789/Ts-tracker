@@ -38,5 +38,17 @@ interface Person {
 
 interface Employee extends Person {
   id: number;
+} //Combines properties (like intersection)
+
+//interface with methods
+interface Person {
+  name: string;
+  greet(): string;
 }
-//Combines properties (like intersection)
+
+const person: Person = {
+  name: "Praveena",
+  greet() {
+    return `Hello, I am ${this.name}`;
+  },
+};
