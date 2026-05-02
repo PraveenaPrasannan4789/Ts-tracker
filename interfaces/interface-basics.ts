@@ -30,3 +30,13 @@ interface MathOperation {
 }
 
 const add: MathOperation = (a, b) => a + b;
+
+//Extending interface
+interface Person {
+  name: string;
+}
+
+interface Employee extends Person {
+  id: number;
+}
+//Combines properties (like intersection)
