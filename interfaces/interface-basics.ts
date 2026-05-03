@@ -32,13 +32,23 @@ interface MathOperation {
 const add: MathOperation = (a, b) => a + b;
 
 //Extending interface
-interface Person {
+interface Person1 {
   name: string;
 }
 
-interface Employee extends Person {
+interface Employee extends Person1 {
   id: number;
-} //Combines properties (like intersection)
+}
+const emp: Employee = {
+  name: "Praveena",
+  id: 1,
+}; //Combines properties (like intersection)
+
+const newData12: Employee = {
+  name: "ammu",
+  id: 90,
+};
+console.log("newData12", newData12);
 
 //interface with methods
 interface Person {
@@ -52,3 +62,10 @@ const person: Person = {
     return `Hello, I am ${this.name}`;
   },
 };
+
+//Index signature
+interface StringArray {
+  [index: number]: string;
+}
+const arr: StringArray = ["a", "b", "c"];
+//This object behaves like an array of strings
