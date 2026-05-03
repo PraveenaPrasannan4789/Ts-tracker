@@ -10,48 +10,52 @@ interface intType {
   age: number;
 }
 
-// 1️⃣ Basic comparison
-// type UserType = {
-//   name: string;
-//   age: number;
-// };
+// Extension vs Intersection
+//  Interface
+interface A {
+  name: string;
+}
+interface B extends A {
+  age: number;
+}
 
-// interface UserInterface {
-//   name: string;
-//   age: number;
-// }
-// 2️⃣ Extension vs Intersection
-// // Interface
-// interface A {
-//   name: string;
-// }
-// interface B extends A {
-//   age: number;
-// }
+// Type
+type x = {
+  name: string;
+};
 
-// // Type
-// type AType = { name: string };
-// type BType = AType & { age: number };
-// 3️⃣ Union (ONLY type)
-// type ID = string | number;
-// 4️⃣ Declaration merging (ONLY interface)
-// interface User {
-//   name: string;
-// }
+type y = x & {
+  age: number;
+};
 
-// interface User {
-//   age: number;
-// }
+// Union (ONLY type)
+type ID = string | number;
 
-// const user: User = {
-//   name: "Praveena",
-//   age: 24
-// };
-// 5️⃣ Function type (both ways)
-// // Type
-// type Add = (a: number, b: number) => number;
+// Declaration merging (ONLY interface)
+interface User {
+  name: string;
+}
 
-// // Interface
-// interface AddFn {
-//   (a: number, b: number): number;
-// }
+interface User {
+  age: number;
+}
+
+const user: User = {
+  name: "Praveena",
+  age: 24,
+};
+
+// Function type (both ways)
+// type
+type typeExample = (a: number, b: number) => number;
+//interface
+interface fnExample {
+  (a: number, b: number): number;
+}
+
+const fn: typeExample = (a, b) => {
+  console.log("a,b", a, b);
+  return a + b;
+};
+
+fn(5, 3);
