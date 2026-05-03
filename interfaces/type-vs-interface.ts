@@ -28,26 +28,34 @@ type y = x & {
   age: number;
 };
 
-// 3️⃣ Union (ONLY type)
-// type ID = string | number;
-// 4️⃣ Declaration merging (ONLY interface)
-// interface User {
-//   name: string;
-// }
+// Union (ONLY type)
+type ID = string | number;
 
-// interface User {
-//   age: number;
-// }
+// Declaration merging (ONLY interface)
+interface User {
+  name: string;
+}
 
-// const user: User = {
-//   name: "Praveena",
-//   age: 24
-// };
-// 5️⃣ Function type (both ways)
-// // Type
-// type Add = (a: number, b: number) => number;
+interface User {
+  age: number;
+}
 
-// // Interface
-// interface AddFn {
-//   (a: number, b: number): number;
-// }
+const user: User = {
+  name: "Praveena",
+  age: 24,
+};
+
+// Function type (both ways)
+// type
+type typeExample = (a: number, b: number) => number;
+//interface
+interface fnExample {
+  (a: number, b: number): number;
+}
+
+const fn: typeExample = (a, b) => {
+  console.log("a,b", a, b);
+  return a + b;
+};
+
+fn(5, 3);
