@@ -8,7 +8,7 @@ function print(value: string | number) {
 
 //instanceof
 
-//hecks whether an object is created from a class.
+//checks whether an object is created from a class.
 
 class Dog {}
 
