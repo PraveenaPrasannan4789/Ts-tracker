@@ -27,7 +27,7 @@ const user3: Readonly<User> = {
   email: "test@example.com",
 };
 
-// user3.name = "New"; ❌
+// user3.name = "New";
 
 // 4. Pick (select properties)
 type UserNameOnly = Pick<User, "name">;
