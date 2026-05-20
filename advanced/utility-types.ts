@@ -44,4 +44,11 @@ const user5: UserWithoutEmail = {
   age: 24,
 };
 
+
+type UserWithoutEmail1= Omit<User, "email">;
+
+const user5: UserWithoutEmail1= {
+  name: "Praveena",
+  age: 24,
+};
 // =======================================
