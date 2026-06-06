@@ -1,3 +1,16 @@
+//Example 1: interface for an API/User object
+  interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
+const user: User = {
+  id: 1,
+  name: "Praveena",
+  email: "praveena@example.com"
+};
+
 //basic comparison
 
 type demoType = {
