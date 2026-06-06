@@ -10,6 +10,16 @@ const user: User = {
   name: "Praveena",
   email: "praveena@example.com"
 };
+//Example 2: type for Union Types
+type UserRole = "Admin" | "User" | "Guest";
+
+let role: UserRole = "Admin";
+
+// Valid
+role = "User";
+
+// Error
+role = "Manager";
 
 //basic comparison
 
