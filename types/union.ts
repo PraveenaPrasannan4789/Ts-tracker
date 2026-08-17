@@ -13,3 +13,10 @@ function checkUnion(i: string | number): void {
 }
 
 checkUnion("hi");
+
+//union example
+
+let newValue: string | number;
+newValue = "newValue";
+newValue = 100;
+console.log("new value", newValue);
