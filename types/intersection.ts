@@ -48,3 +48,10 @@ let xy: data3 = {
   name: "praveena",
   age: 27,
 };
+
+let example2: data3 = {
+  name: "abc",
+  age: 29,
+};
+
+console.log("example", example2);
